@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 text-center">
+                <h3>Actualizar Ubicacion</h3>
+            </div>
+            <div class="col-md-offset-4 col-md-4">
+                <form [formGroup]="ubicacionForm" (ngSubmit)="actualizarUbicacion()">
+                    
+                    <table class="table">
+                        <tr><label for="codigo">Código</label></tr>
+                        <tr><input id="codigo" type="text" formControlName="codigo" class="form-control"></tr>
+                        <tr><label for="latitud">Latitud</label></tr>
+                        <tr><input id="latitud" type="number" formControlName="latitud" class="form-control"></tr>
+                        <tr><label for="longitud">Longitud</label></tr>
+                        <tr><input id="longitud" type="number" formControlName="longitud" class="form-control"></tr>
+                        <tr><label for="nombre">Nombre de la tienda</label></tr>
+                        <tr><input id="nombre" type="text" formControlName="nombre" class="form-control"></tr>
+                        <tr><label for="distrito">Distrito</label></tr>
+                        <tr><input id="distrito" type="text" formControlName="distrito" class="form-control"></tr>
+                        <tr><label for="info">Informacion</label></tr>
+                        <tr><input id="info" type="text" formControlName="info" class="form-control"></tr>
+                    </table>
+
+
+
+                    <button type="submit" class="btn btn-default btn-lg">Guardar Cambios</button>
+                    <button (click)="navegarAUbicaciones()" class="btn btn-danger btn-lg">Cancelar</button>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+

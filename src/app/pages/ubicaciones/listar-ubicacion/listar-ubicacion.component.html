@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+        <div class="panel-body">
+            <button (click)="navegarACrearUbicacion()" class="btn btn-success">Agregar ubicacion</button>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-bordered buttons-margin">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
+                    <th>Nombre</th>
+                    <th>Distrito</th>
+                    <th>Info</th>
+                    <th class="col-md-2">Acciones</th>
+                    
+                </tr>
+                <tr *ngFor="let ubicacion of ubicaciones">
+                    <td>{{ ubicacion.codigo }}</td>
+                    <td>{{ ubicacion.latitud }}</td>
+                    <td>{{ ubicacion.longitud }}</td>
+                    <td>{{ ubicacion.nombre }}</td>
+                    <td>{{ ubicacion.distrito }}</td>
+                    <td>{{ ubicacion.info }}</td>
+                    <td><button class="btn btn-danger" (click)="eliminarUbicacion(ubicacion.codigo)">Eliminar</button>
+                    <button class="btn btn-default" (click)="navegarEditarUbicacion(ubicacion.codigo)">Modificar</button></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</section>
